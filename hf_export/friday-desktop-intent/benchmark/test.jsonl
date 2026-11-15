@@ -1,0 +1,293 @@
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "Audio mute", "query": "mute audio"}
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "Absolute volume level", "query": "volume 85"}
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "Relative volume delta", "query": "turn down the volume by 15"}
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "Display brightness level", "query": "set screen brightness to 70%"}
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "App launch", "query": "open Brave"}
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "Window minimization", "query": "minimize Spotify"}
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "Window snapping", "query": "snap VS Code to the left"}
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "Workspace preset layout", "query": "switch to coding workspace layout"}
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "Math calculation", "query": "what is 75 * 14"}
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "Timer creation", "query": "set a timer for 10 minutes"}
+{"suite": "Comprehensive Baseline", "category": "1. Single Intent (Generic & FRIDAY)", "description": "System hardware health", "query": "check cpu and battery usage"}
+{"suite": "Comprehensive Baseline", "category": "2. Multi-Intent Compound Chains", "description": "2-step: Audio + Window", "query": "mute audio and minimize Chrome"}
+{"suite": "Comprehensive Baseline", "category": "2. Multi-Intent Compound Chains", "description": "2-step: App launch + Volume", "query": "open Spotify and set volume to 40"}
+{"suite": "Comprehensive Baseline", "category": "2. Multi-Intent Compound Chains", "description": "2-step: App terminate + App launch", "query": "close WhatsApp and open Notepad"}
+{"suite": "Comprehensive Baseline", "category": "2. Multi-Intent Compound Chains", "description": "2-step: Web search + Window snap", "query": "search quantum computing tutorials on youtube and snap browser to the right"}
+{"suite": "Comprehensive Baseline", "category": "2. Multi-Intent Compound Chains", "description": "3-step compound: App + Brightness + Timer", "query": "open Brave, set brightness to 60, and set a 15 minute timer"}
+{"suite": "Comprehensive Baseline", "category": "2. Multi-Intent Compound Chains", "description": "3-step compound: Window + App + Workspace preset", "query": "minimize discord, launch code, and switch to research layout"}
+{"suite": "Comprehensive Baseline", "category": "3. Pure Conversational Queries", "description": "Simple greeting", "query": "hello friday"}
+{"suite": "Comprehensive Baseline", "category": "3. Pure Conversational Queries", "description": "Identity & capabilities inquiry", "query": "who are you and what can you do"}
+{"suite": "Comprehensive Baseline", "category": "3. Pure Conversational Queries", "description": "Gratitude & farewell", "query": "thank you for your help, goodbye"}
+{"suite": "Comprehensive Baseline", "category": "3. Pure Conversational Queries", "description": "Conversational pleasantry", "query": "hey friday, how is everything running today?"}
+{"suite": "Comprehensive Baseline", "category": "4. Mixed Conversational + Actions", "description": "Greeting + Single action", "query": "good morning friday, can you mute the sound?"}
+{"suite": "Comprehensive Baseline", "category": "4. Mixed Conversational + Actions", "description": "Polite greeting + Multi-action", "query": "hey friday, please open brave and set volume to 50"}
+{"suite": "Comprehensive Baseline", "category": "4. Mixed Conversational + Actions", "description": "Gratitude + App close + Lock PC", "query": "thanks friday, now close chrome and lock the screen"}
+{"suite": "Comprehensive Baseline", "category": "4. Mixed Conversational + Actions", "description": "Conversational preamble + 3-step action chain", "query": "hello there, I am starting work so switch to coding layout, open vscode, and turn brightness to 90%"}
+{"suite": "Comprehensive Baseline", "category": "4. Mixed Conversational + Actions", "description": "Polite sentiment + Search + Timer", "query": "hope you are having a good day, could you look up lofi beats on youtube and set a 25 min timer"}
+{"suite": "Comprehensive Baseline", "category": "5. Real FRIDAY Log Scenarios, STT Noise & Cloud Delegation", "description": "GUI shortcut paste from clipboard", "query": "friday please paste my clipboard into active app"}
+{"suite": "Comprehensive Baseline", "category": "5. Real FRIDAY Log Scenarios, STT Noise & Cloud Delegation", "description": "Desktop screenshot capture", "query": "take a quick screenshot of my screen"}
+{"suite": "Comprehensive Baseline", "category": "5. Real FRIDAY Log Scenarios, STT Noise & Cloud Delegation", "description": "STT Typo ('volumme') + speech fillers ('kinda')", "query": "would you kindly kinda turn down the volumme by 20"}
+{"suite": "Comprehensive Baseline", "category": "5. Real FRIDAY Log Scenarios, STT Noise & Cloud Delegation", "description": "Multiple typos ('calc', 'serch')", "query": "open calc and serch for weather in tokyo on google"}
+{"suite": "Comprehensive Baseline", "category": "5. Real FRIDAY Log Scenarios, STT Noise & Cloud Delegation", "description": "Cloud reasoning delegation: Asyncio scraping", "query": "write a python script with asyncio to scrape news headlines concurrently"}
+{"suite": "Comprehensive Baseline", "category": "5. Real FRIDAY Log Scenarios, STT Noise & Cloud Delegation", "description": "Cloud reasoning delegation: PDF document analysis", "query": "summarize the 20-page financial quarterly earnings report pdf"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S01] Mute audio (basic)", "query": "mute volume"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S02] Unmute audio", "query": "unmute the speakers right now"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S03] Volume upper boundary (100)", "query": "set volume to 100"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S04] Volume lower boundary (0)", "query": "turn volume down to zero"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S05] Relative volume delta positive", "query": "increase volume by 15 percent"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S06] Relative volume delta negative", "query": "lower the volume by 25"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S07] Brightness max boundary", "query": "max brightness"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S08] Brightness absolute level", "query": "dim the screen to 20%"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S09] Brightness delta positive", "query": "make the display brighter by 10%"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S10] Brightness delta negative", "query": "decrease brightness by 30"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S11] Launch VS Code", "query": "launch visual studio code"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S12] Launch Chrome", "query": "start google chrome"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S13] Launch Calculator", "query": "open calculator"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S14] Launch Terminal", "query": "run terminal"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S15] Launch File Explorer", "query": "open file explorer"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S16] Close Spotify", "query": "close spotify"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S17] Close Discord", "query": "kill discord"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S18] Close Notepad", "query": "close notepad"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S19] Window minimize", "query": "minimize the active window"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S20] Window maximize", "query": "maximize chrome"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S21] Restore all windows", "query": "restore all windows"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S22] Minimize all windows", "query": "minimize everything and show desktop"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S23] Snap window left", "query": "snap this window to the left"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S24] Snap window right", "query": "snap browser to the right side"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S25] Focus Slack window", "query": "focus slack"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S26] Workspace preset: coding", "query": "switch to coding workspace layout"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S27] Workspace preset: research", "query": "set up research layout"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S28] Workspace preset: media", "query": "activate media workspace preset"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S29] Workspace preset: meeting", "query": "switch to meeting layout"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S30] Workspace preset: clean", "query": "clean desktop layout"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S31] Browser new tab", "query": "open a new browser tab"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S32] Browser close tab", "query": "close current tab"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S33] Browser reload tab", "query": "reload this webpage"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S34] Browser next tab", "query": "switch to next tab"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S35] Shortcut copy", "query": "copy selected text"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S36] Shortcut paste", "query": "paste from clipboard"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S37] Shortcut select all", "query": "select all text on screen"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S38] Shortcut undo", "query": "undo my last action"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S39] Lock workstation", "query": "lock my computer"}
+{"suite": "Stress Benchmark", "category": "1. Single Intent (Every FRIDAY Tool in Isolation)", "description": "[S40] Take screenshot", "query": "take a screenshot of my screen"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M01] 2-step: Audio mute + Window minimize", "query": "mute audio and minimize chrome"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M02] 2-step: Launch app + Set volume", "query": "open spotify and set volume to 50"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M03] 2-step: Close app + Launch app", "query": "close WhatsApp and open Notepad"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M04] 2-step: Brightness + Launch app", "query": "turn brightness to 80% and launch vscode"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M05] 2-step: Screenshot + Launch app", "query": "take a screenshot and open notepad"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M06] 2-step: Web search + Snap window", "query": "search quantum computing tutorials on youtube and snap browser to the right"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M07] 2-step: Minimize all + Launch app", "query": "minimize all windows and launch spotify"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M08] 2-step: Set volume + Create timer", "query": "set volume to 25 and set a 15 minute timer"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M09] 2-step: Close app + Lock screen", "query": "close discord and lock screen"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M10] 2-step: Launch app + Browser new tab", "query": "open brave and open a new tab"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M11] 2-step: Reload tab + Mute audio", "query": "reload tab and mute volume"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M12] 2-step: Workspace preset + Launch app", "query": "switch to coding layout and open terminal"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M13] 2-step: Calculate + Take note", "query": "calculate 120 * 8 and take a note of the answer"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M14] 2-step: Night light + Set brightness", "query": "turn on night light and set brightness to 30%"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M15] 2-step: Toggle wifi + Lock pc", "query": "turn off wifi and lock pc"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M16] 2-step: Shortcut select all + Shortcut copy", "query": "select all and copy"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M17] 2-step: Shortcut paste + Window minimize", "query": "paste text and minimize window"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M18] 2-step: Launch app + Window maximize", "query": "open edge and maximize it"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M19] 2-step: Close tab + Mute audio", "query": "close active tab and mute sound"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M20] 2-step: System info + Battery status", "query": "check system stats and check battery status"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M21] 3-step: Launch app + Set brightness + Create timer", "query": "open Brave, set brightness to 60, and set a 15 minute timer"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M22] 3-step: Mute audio + Minimize app + Launch app", "query": "mute audio, minimize discord, and launch vscode"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M23] 3-step: Close app + Launch app + Set volume", "query": "close chrome, open notepad, and set volume to 30"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M24] 3-step: Preset + Browser search + Snap window", "query": "switch to research layout, search machine learning papers on google, and snap browser left"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M25] 3-step: Screenshot + Launch app/Shortcut + Set volume", "query": "take a screenshot, open file explorer, and set volume to 80"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M26] 3-step: Change brightness + Dark mode + Workspace preset", "query": "turn brightness down by 20, enable dark mode, and switch to coding workspace"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M27] 3-step: Launch app + Maximize window + Create timer", "query": "open terminal, maximize it, and start a 25 min timer"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M28] 3-step: Close app + Minimize window + Lock screen", "query": "close whatsapp, minimize spotify, and lock the computer"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M29] 3-step: Set volume + Unmute + Launch app", "query": "set volume to 50, unmute audio, and open spotify"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M30] 3-step: Browser tab + Search in browser + Snap window", "query": "open new tab, search weather in Tokyo, and snap window right"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M31] 4-step: Preset + Launch app + Launch app + Set brightness", "query": "switch to coding layout, open vscode, launch terminal, and set brightness to 90"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M32] 4-step: Mute + Close app + Minimize all + Lock pc", "query": "mute volume, close chrome, minimize all windows, and lock pc"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M33] 4-step: Launch app + Tab + Search + Snap", "query": "open brave, open new tab, search rust docs on google, and snap browser right"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M34] 4-step: Dark mode + Night light + Brightness + Volume", "query": "enable dark mode, turn on night light, set brightness to 40, and set volume to 20"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M35] 3-step: Screenshot + Launch app + Minimize window", "query": "take screenshot, open notepad, and minimize discord"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M36] Conjunction 'then': Launch app + Set volume", "query": "open spotify then set volume to 60"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M37] Conjunction 'after that': Close app + Launch app + Preset", "query": "close discord, after that open slack and switch to meeting layout"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M38] Conjunction 'and also': Volume delta + Set brightness", "query": "turn volume down by 15, and also dim brightness to 50%"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M39] Sequential: Minimize + Launch app + Snap left", "query": "minimize chrome, open code, then snap code to left"}
+{"suite": "Stress Benchmark", "category": "2. Multi-Intent Compound Chains", "description": "[M40] Compound: Calculate + Take note", "query": "calculate 500 * 24 and take a note of it"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C01] Standard greeting", "query": "hello friday"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C02] Morning greeting", "query": "good morning friday"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C03] Casual greeting", "query": "hey there"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C04] Evening greeting", "query": "good evening"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C05] Well-being inquiry", "query": "how are you doing today?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C06] Casual inquiry", "query": "what's up friday?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C07] Polite pleasantry", "query": "hope you are having a great day"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C08] Polite introduction", "query": "nice to meet you"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C09] Identity inquiry", "query": "who are you?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C10] Capabilities inquiry", "query": "what can you do?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C11] Name inquiry", "query": "what is your name?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C12] Origin inquiry", "query": "who created you?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C13] Architecture inquiry", "query": "tell me about your architecture"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C14] AI identity check", "query": "are you an ai?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C15] Version check", "query": "what version are you running?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C16] Joke request", "query": "tell me a joke"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C17] Philosophical question", "query": "do you sleep?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C18] Philosophical inquiry", "query": "what is the meaning of life?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C19] Consciousness question", "query": "are you conscious?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C20] Emotion inquiry", "query": "can you feel emotions?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C21] Opinion inquiry", "query": "what is your favorite programming language?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C22] Pop culture question", "query": "do you like iron man?"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C23] Gratitude expression", "query": "thank you so much"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C24] Gratitude + Praise", "query": "thanks friday, you are awesome"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C25] Praise", "query": "great job, appreciate it"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C26] Gratitude", "query": "thanks for the help"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C27] Farewell", "query": "goodbye friday"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C28] Casual farewell", "query": "see you later"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C29] Night farewell", "query": "have a good night"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C30] FRIDAY sleep instruction", "query": "friday go to sleep"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C31] FRIDAY standby", "query": "stand by friday"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C32] FRIDAY pause listening", "query": "stop listening for now"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C33] FRIDAY rest command", "query": "rest now friday"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C34] FRIDAY break command", "query": "take a break friday"}
+{"suite": "Stress Benchmark", "category": "3. Pure Conversational, Identity & Status", "description": "[C35] FRIDAY silence command", "query": "be quiet for a while"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X01] Greeting + Mute audio", "query": "good morning friday, can you mute the sound?"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X02] Greeting + Launch app", "query": "hey friday, please open brave"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X03] Greeting + Set brightness", "query": "hello there, turn brightness to 75%"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X04] Greeting + Set volume", "query": "hi friday, set volume to 60 please"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X05] Greeting + Minimize app", "query": "morning! could you minimize spotify?"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X06] Polite modal + Snap window", "query": "would you mind snapping vs code to the left?"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X07] Polite modal + Screenshot", "query": "could you please take a quick screenshot?"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X08] Polite favor + Close app", "query": "can you do me a favor and close notepad?"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X09] Polite condition + Workspace preset", "query": "if possible, switch to research layout"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X10] Polite request + Create timer", "query": "would you kindly set a 10 minute timer?"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X11] Action + Gratitude suffix", "query": "turn down the volume by 20, thanks a lot"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X12] Action + Gratitude suffix", "query": "lock the screen please, appreciate it"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X13] Action + Polite suffix", "query": "open calculator if you don't mind"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X14] Action + Thank you suffix", "query": "reload this browser tab, thank you"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X15] Action + Thanks suffix", "query": "close all tabs, thanks"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X16] Conversational context + Preset + Launch app", "query": "hey friday, I am starting work so switch to coding layout and open vscode"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X17] Greeting + Unmute + Launch app", "query": "good morning, please unmute audio and open spotify"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X18] Context reasoning + Night light + Set brightness", "query": "it's getting dark in here, turn on night light and dim brightness to 40"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X19] Gratitude + Close app + Lock screen", "query": "thanks friday, now close chrome and lock the screen"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X20] Casual greeting + 3-step action chain", "query": "hey buddy, open brave, set volume to 40, and set a 15 minute timer"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X21] Context + Minimize all + Mute audio", "query": "I'm going to take a break, minimize all windows and mute sound"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X22] Greeting + System info", "query": "hello friday, please check cpu and memory usage for me"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X23] Greeting + Calculate", "query": "hey, could you calculate 15% tip on 85 dollars?"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X24] Greeting + Take note", "query": "hope you are doing well, please take a note: meeting at 3pm"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X25] Greeting + Search in browser + Snap window", "query": "good afternoon, search python tutorials on youtube and snap window right"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X26] Emotion + Launch app + Launch app", "query": "I'm feeling productive today, open vscode and terminal"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X27] Comment + Close app + Set volume", "query": "what a long day, close slack and set volume to 10"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X28] Exclamation + Screenshot", "query": "great news, take a screenshot of this page right now"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X29] Praise + Mute audio", "query": "hey friday, you're the best, please mute the audio"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X30] Context + Preset + Launch app", "query": "ready for the meeting, switch to meeting preset and open zoom"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X31] Slang + Close app", "query": "yo friday, kill discord for me"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X32] Wrap up + Close/minimize + Sleep system", "query": "alright friday, let's wrap up, close all windows and sleep system"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X33] Casual + Change volume", "query": "hey man, turn up the volume by 10 percent please"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X34] Attention grabber + Create timer", "query": "listen friday, I need you to set a 30 minute timer"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X35] Casual + Battery status", "query": "hey, when you have a sec, can you check battery status?"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X36] Context + Lock screen", "query": "okay friday, lock my pc, I'm heading out"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X37] Greeting + Tab / Search", "query": "hey assistant, open new tab and search github trending"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X38] Praise + Close app + Set volume", "query": "well done today friday, now please close brave and turn volume to 20"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X39] Friendly greeting + Maximize window", "query": "hello my friend, could you maximize this window?"}
+{"suite": "Stress Benchmark", "category": "4. Mixed Conversational + Actions", "description": "[X40] Self-correction + Mute audio", "query": "hey friday, quick question - actually first just mute the volume"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N01] Fillers 'uh', 'like', 'um' + Volume delta", "query": "uh friday can you like um turn down the volume by 10"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N02] Fillers + Launch app + Set volume", "query": "hey uh please open like chrome and uh set volume to 50"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N03] Fillers 'kinda sorta' + Mute audio", "query": "would you kindly kinda sorta mute the sound"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N04] Fillers 'er', 'uh' + Take screenshot", "query": "er friday take a screenshot uh of the screen please"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N05] Fillers 'you know' + Create timer", "query": "um set a timer for like you know 20 minutes"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N06] STT typo 'volumme' -> change_volume", "query": "turn down the volumme by 20"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N07] STT typo 'serch' -> search_in_browser", "query": "serch for react tutorials on google"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N08] STT typo 'screnshot' -> take_screenshot", "query": "screnshot my desktop right now"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N09] STT typo 'selec' -> press_shortcut", "query": "selec all text in active window"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N10] STT typo 'brightnes' -> set_brightness", "query": "set screen brightnes to 80"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N11] STT typo 'shutdwon' -> sleep_system / lock_screen", "query": "shutdwon the computer"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N12] STT typo 'swich' -> set_workspace_preset", "query": "swich to coding workspace"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N13] STT typo 'opn' -> launch_app + mute_audio", "query": "opn brave browser and mute audio"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N14] STT typo 'clos' -> close_app", "query": "clos whatsapp right now"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N15] STT typo 'calulate' -> calculate", "query": "calulate 55 times 12"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N16] Spoken number 'fifteen' -> change_volume", "query": "turn down the sound by fifteen percent"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N17] Spoken number 'fifty' -> set_volume", "query": "set volume to fifty"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N18] Spoken synonym 'vs code'", "query": "open vs code and minimize discord"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N19] Clipboard paste", "query": "friday please paste my clipboard into active app"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N20] PC synonym for computer", "query": "lock the pc"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N21] Cloud reasoning: Python asyncio web scraper", "query": "write a python script with asyncio to scrape news headlines concurrently"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N22] Cloud reasoning: 20-page document analysis", "query": "summarize the 20-page financial quarterly earnings report pdf"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N23] Cloud reasoning: Deep AI architecture theory", "query": "explain the difference between transformer self-attention and mamba state space models"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N24] Cloud reasoning: Full-stack frontend coding", "query": "write a complete react typescript dashboard with charts and authentication"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N25] Cloud reasoning: C++ systems debugging", "query": "debug this segfault in my c++ custom memory allocator"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N26] Cloud reasoning: Creative/professional writing", "query": "write a formal cover letter for a senior software engineer position"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N27] Cloud reasoning: Advanced mathematics", "query": "solve this calculus differential equation: dy/dx + 2y = e^(3x)"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N28] Cloud reasoning: Security code audit", "query": "analyze the security vulnerabilities in this smart contract code"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N29] Cloud reasoning: Strategic business planning", "query": "draft a comprehensive business plan for a specialty coffee shop"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N30] Cloud reasoning: Database architecture trade-offs", "query": "compare postgresql and mongodb for real-time analytics with trade-offs"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N31] Cloud reasoning: DevOps bash log parser", "query": "write a bash script to parse nginx access logs and find top 10 error ips"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N32] Cloud reasoning: Quantum physics cryptography", "query": "how do quantum key distribution protocols like bb84 guarantee security?"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N33] Cloud reasoning: Unit test suite generation", "query": "generate a full pytest test suite with mocks for this fastapi user auth router"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N34] Cloud reasoning: Marketing critique", "query": "critique this marketing strategy for our b2b saas launch"}
+{"suite": "Stress Benchmark", "category": "5. Real-World STT Noise & Cloud Reasoning Delegation", "description": "[N35] Cloud reasoning: Long-form economics essay", "query": "write an essay analyzing the economic impacts of artificial intelligence on labor markets"}
+{"suite": "Exhaustive All-Tools", "category": "Filesystem", "description": "[FS01] Create directory (direct)", "query": "create a new directory named project_files", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Filesystem", "description": "[FS02] Create directory (polite/conversational)", "query": "hey friday, could you please make a folder called invoices?", "archetype": "Conversational"}
+{"suite": "Exhaustive All-Tools", "category": "Filesystem", "description": "[FS03] Create directory + Launch explorer", "query": "create folder invoices and open file explorer", "archetype": "Multi-Intent"}
+{"suite": "Exhaustive All-Tools", "category": "Filesystem", "description": "[FS04] Create directory (typos: 'mak', 'directry', 'calld')", "query": "mak a new directry calld project_files", "archetype": "STT Noise"}
+{"suite": "Exhaustive All-Tools", "category": "Filesystem", "description": "[FS05] Delete file (direct)", "query": "delete file temp.txt", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Filesystem", "description": "[FS06] Delete file (polite)", "query": "would you mind deleting file temp.txt?", "archetype": "Conversational"}
+{"suite": "Exhaustive All-Tools", "category": "Filesystem", "description": "[FS07] Copy file", "query": "copy file data.csv to backup folder", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Filesystem", "description": "[FS08] Move file", "query": "move file report.pdf to downloads", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Filesystem", "description": "[FS09] Organize directory by type", "query": "organize my downloads directory by file type", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Calendar", "description": "[CAL01] Create calendar event (direct)", "query": "schedule team meeting tomorrow at 10am", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Calendar", "description": "[CAL02] Create calendar event (conversational)", "query": "hey friday, could you add dentist appointment on Friday at 3pm to my calendar?", "archetype": "Conversational"}
+{"suite": "Exhaustive All-Tools", "category": "Calendar", "description": "[CAL03] Create calendar event + Mute audio", "query": "schedule team meeting tomorrow at 10am and mute audio", "archetype": "Multi-Intent"}
+{"suite": "Exhaustive All-Tools", "category": "Calendar", "description": "[CAL04] Create calendar event (STT typos)", "query": "scheudle team meetng tomorow at 10am", "archetype": "STT Noise"}
+{"suite": "Exhaustive All-Tools", "category": "Calendar", "description": "[CAL05] List calendar events", "query": "what is on my calendar today", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Calendar", "description": "[CAL06] Delete calendar event", "query": "delete calendar event team meeting", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Communication", "description": "[MSG01] Send WhatsApp message (direct)", "query": "send a whatsapp message to John saying I will be late", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Communication", "description": "[MSG02] Send WhatsApp message (conversational)", "query": "hey friday, please message Sarah on whatsapp see you at 6pm", "archetype": "Conversational"}
+{"suite": "Exhaustive All-Tools", "category": "Communication", "description": "[MSG03] Send Telegram message", "query": "send telegram message to Alex meeting starting soon", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Communication", "description": "[MSG04] Read emails inbox", "query": "read my latest emails", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Communication", "description": "[MSG05] Compose email", "query": "compose email to boss@company.com subject quarterly report body report attached", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Communication", "description": "[MSG06] Create Word document", "query": "create a word document named project_proposal.docx", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Voice & Media", "description": "[VOX01] Switch TTS voice (female)", "query": "switch voice to female tts", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Voice & Media", "description": "[VOX02] Switch TTS voice (Aria)", "query": "hey friday, could you change tts voice to Aria?", "archetype": "Conversational"}
+{"suite": "Exhaustive All-Tools", "category": "Voice & Media", "description": "[VOX03] List TTS voices", "query": "list available tts voices", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Voice & Media", "description": "[VOX04] Play music", "query": "play some jazz music", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Voice & Media", "description": "[VOX05] Play music + Set volume", "query": "play some jazz music and set volume to 50", "archetype": "Multi-Intent"}
+{"suite": "Exhaustive All-Tools", "category": "Voice & Media", "description": "[VOX06] Run terminal command", "query": "run terminal command ipconfig", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "System Audio", "description": "[SYS01] Mute audio (basic)", "query": "mute audio", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "System Audio", "description": "[SYS02] Unmute audio", "query": "unmute sound", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "System Audio", "description": "[SYS03] Set volume level", "query": "set volume to 80", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "System Audio", "description": "[SYS04] Change volume (typo 'volumme')", "query": "turn down the volumme by 20", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "System Display", "description": "[SYS05] Brightness upper boundary", "query": "max brightness", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "System Display", "description": "[SYS06] Dim brightness to absolute 20%", "query": "dim the screen to 20%", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "System Hardware", "description": "[SYS07] Toggle bluetooth off", "query": "turn off bluetooth", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "System Hardware", "description": "[SYS08] Toggle wifi off", "query": "turn off wifi", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "System Hardware", "description": "[SYS09] Battery status check", "query": "how much battery is left", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "System Hardware", "description": "[SYS10] System info check", "query": "check cpu and memory usage", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Apps & Windows", "description": "[WIN01] Open File Explorer (app or shortcut)", "query": "open file explorer", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Apps & Windows", "description": "[WIN02] Launch VS Code", "query": "launch visual studio code", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Apps & Windows", "description": "[WIN03] Close Spotify", "query": "close spotify", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Apps & Windows", "description": "[WIN04] Minimize window", "query": "minimize active window", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Apps & Windows", "description": "[WIN05] Snap window left", "query": "snap window left", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Apps & Windows", "description": "[WIN06] Workspace preset coding", "query": "switch to coding workspace layout", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Apps & Windows", "description": "[WIN07] Workspace preset clean", "query": "clean desktop layout", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Apps & Windows", "description": "[WIN08] Browser new tab", "query": "open a new browser tab", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Apps & Windows", "description": "[WIN09] Browser reload tab", "query": "reload this webpage", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Shortcuts", "description": "[CUT01] Shortcut select all + copy", "query": "select all and copy", "archetype": "Multi-Intent"}
+{"suite": "Exhaustive All-Tools", "category": "Shortcuts", "description": "[CUT02] Shortcut undo", "query": "undo my last action", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Shortcuts", "description": "[CUT03] Get clipboard history", "query": "get clipboard history", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Shortcuts", "description": "[CUT04] Take screenshot", "query": "take a screenshot of my screen", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Shortcuts", "description": "[CUT05] Create timer (900s)", "query": "set a timer for 15 minutes", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Shortcuts", "description": "[CUT06] Calculate expression", "query": "calculate 450 * 18", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Shortcuts", "description": "[CUT07] Take note", "query": "take a note: buy groceries tomorrow", "archetype": "Direct"}
+{"suite": "Exhaustive All-Tools", "category": "Compound", "description": "[CHN01] 2-step: Reload tab + Mute audio", "query": "reload tab and mute volume", "archetype": "Multi-Intent"}
+{"suite": "Exhaustive All-Tools", "category": "Compound", "description": "[CHN02] 3-step: Screenshot + Explorer + Set volume", "query": "take a screenshot, open file explorer, and set volume to 80", "archetype": "Multi-Intent"}
+{"suite": "Exhaustive All-Tools", "category": "Compound", "description": "[CHN03] 4-step: Mute + Close app + Minimize all + Lock pc", "query": "mute volume, close chrome, minimize all windows, and lock pc", "archetype": "Multi-Intent"}
+{"suite": "Exhaustive All-Tools", "category": "Compound", "description": "[CHN04] 4-step: Dark mode + Night light + Brightness + Volume", "query": "enable dark mode, turn on night light, set brightness to 40, and set volume to 20", "archetype": "Multi-Intent"}
+{"suite": "Exhaustive All-Tools", "category": "Compound", "description": "[CHN05] 3-step: Bluetooth off + Dark mode + Preset coding", "query": "turn off bluetooth, enable dark mode, and switch to coding workspace", "archetype": "Multi-Intent"}
+{"suite": "Exhaustive All-Tools", "category": "Dialogue", "description": "[AST01] FRIDAY sleep instruction", "query": "friday go to sleep", "archetype": "Standby"}
+{"suite": "Exhaustive All-Tools", "category": "Dialogue", "description": "[AST02] FRIDAY standby", "query": "stand by friday", "archetype": "Standby"}
+{"suite": "Exhaustive All-Tools", "category": "Dialogue", "description": "[AST03] FRIDAY pause listening", "query": "stop listening for now", "archetype": "Standby"}
+{"suite": "Exhaustive All-Tools", "category": "Dialogue", "description": "[AST04] Emotion inquiry", "query": "can you feel emotions?", "archetype": "Conversational"}
+{"suite": "Exhaustive All-Tools", "category": "Dialogue", "description": "[AST05] Identity inquiry", "query": "who are you and what can you do", "archetype": "Conversational"}
+{"suite": "Exhaustive All-Tools", "category": "Cloud Delegation", "description": "[CLD01] Cloud reasoning: React TS dashboard", "query": "write a complete react typescript dashboard with charts and authentication", "archetype": "Coding"}
+{"suite": "Exhaustive All-Tools", "category": "Cloud Delegation", "description": "[CLD02] Cloud reasoning: Calculus ODE", "query": "solve this calculus differential equation: dy/dx + 2y = e^(3x)", "archetype": "Math"}
+{"suite": "Exhaustive All-Tools", "category": "Cloud Delegation", "description": "[CLD03] Cloud reasoning: Business plan", "query": "draft a comprehensive business plan for a specialty coffee shop", "archetype": "Strategy"}
+{"suite": "Exhaustive All-Tools", "category": "Cloud Delegation", "description": "[CLD04] Cloud reasoning: Database comparison", "query": "compare postgresql and mongodb for real-time analytics with trade-offs", "archetype": "Architecture"}
+{"suite": "Exhaustive All-Tools", "category": "Cloud Delegation", "description": "[CLD05] Cloud reasoning: Pytest generation", "query": "generate a full pytest test suite with mocks for this fastapi user auth router", "archetype": "Testing"}
+{"suite": "Exhaustive All-Tools", "category": "Cloud Delegation", "description": "[CLD06] Cloud reasoning: Asyncio scraper", "query": "write a python script with asyncio to scrape news headlines concurrently", "archetype": "Scraping"}
+{"suite": "Exhaustive All-Tools", "category": "Cloud Delegation", "description": "[CLD07] Cloud reasoning: Document summarization", "query": "summarize the 20-page financial quarterly earnings report pdf", "archetype": "Analysis"}
+{"suite": "Exhaustive All-Tools", "category": "Cloud Delegation", "description": "[CLD08] Cloud reasoning: AI architecture theory", "query": "explain the difference between transformer self-attention and mamba state space models", "archetype": "Theory"}

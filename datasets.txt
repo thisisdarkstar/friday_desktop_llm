@@ -1,0 +1,87 @@
+# DesktopIntent-LLM: Dataset Evaluation & Recommendations
+
+# ==============================================================================
+# 1. REVIEW OF YOUR DATASETS
+# ==============================================================================
+
+# [POOR FIT] Text classification format (NLI). Only outputs integer class labels (0, 1, 2)
+# and hypothesis strings. Cannot teach an LLM to generate structured JSON tool calls or extract arguments.
+https://huggingface.co/datasets/rohithbojja/zero-shot-intent-classification
+
+# [PARTIAL FIT - UTTERANCES ONLY] Classic HWU64 academic NLU benchmark. Good human utterances,
+# but outputs only a single categorical string (e.g., "alarm_query"). No tool arguments and no multi-intent.
+https://huggingface.co/datasets/DeepPavlov/hwu_intent_classification
+
+# [DO NOT USE - SOURCE OF SLOW CHAIN-OF-THOUGHT]
+# This is the exact dataset that trained the model taking 3+ seconds!
+# Every sample forces a 5-step verbose internal monologue ('thinking': {'step 1...', 'step 2...'}),
+# wasting 150-250 reasoning tokens per query. Single intent string only, no executable JSON tool args.
+https://huggingface.co/datasets/Nikhil1581/intent-classification-for-my-project
+https://huggingface.co/datasets/Nikhil1581/intent-classification-100k
+
+# [POOR FIT - CHAT ROLEPLAY] Conversational butler replies ("Hello sir, how are you", "Playing song sir").
+# Does not output machine-readable JSON tool calls.
+https://huggingface.co/datasets/suyashkrishangarg/Jarvis_Dataset
+
+# [GOOD FIT - WITH SCHEMA ADAPTATION] Maps voice/text commands directly to canonical JSON intent plans.
+# Good for command routing, but requires mapping keys to our Windows Win32/PyCaw tool schema.
+https://huggingface.co/datasets/chitesh12545/jarvis-intent-dataset
+
+
+# ==============================================================================
+# 2. RECOMMENDED HIGH-VALUE DATASETS FOR FUNCTION-CALLING & MULTI-INTENT
+# ==============================================================================
+
+# [TOP PICK - MULTI-TOOL CALLING] Outstanding dataset specifically featuring parallel / multi-tool
+# calling in a single turn. Teaches small models to emit multiple function calls without hallucination.
+https://huggingface.co/datasets/glaiveai/glaive-function-calling-v2
+
+# [TOP PICK - JSON SCHEMA ACCURACY] 60,000 clean pairs of user queries mapped to exact JSON tool calls
+# and parameters. Gold standard for small model tool-calling accuracy.
+https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k
+
+# [HIGH VALUE - COMPACT AGENT] Nous Research's curated function-calling dataset used to train Hermes models
+# for zero-chatter, immediate tool dispatching.
+https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1
+
+# [BENCHMARK - MULTI-TURN & COMPLEX SLOTS] Industry standard for complex intent decomposition,
+# slot filling, and multi-action compound dialogue.
+https://huggingface.co/datasets/MultiWOZ/multiwoz_v22
+
+# [LOCAL NATIVE DATASET - 100% TAILORED]
+# Located at: d:\Projects\desktop-llm\dataset\train.jsonl
+# 5,400 training pairs built specifically for our 17 Windows system tools:
+# - 40% Single-intent (colloquial, slang, direct)
+# - 35% Multi-intent (parallel, sequential, pronoun resolution)
+# - 10% Implicit compound (bedtime, focus mode, presentation mode)
+# - 15% Fallbacks & conversational safety nets
+
+
+
+# ==============================================================================
+# 2. RECOMMENDED HIGH-VALUE DATASETS FOR FUNCTION-CALLING & MULTI-INTENT
+# ==============================================================================
+
+# [TOP PICK - MULTI-TOOL CALLING] Outstanding dataset specifically featuring parallel / multi-tool
+# calling in a single turn. Teaches small models to emit multiple function calls without hallucination.
+https://huggingface.co/datasets/glaiveai/glaive-function-calling-v2
+
+# [TOP PICK - JSON SCHEMA ACCURACY] 60,000 clean pairs of user queries mapped to exact JSON tool calls
+# and parameters. Gold standard for small model tool-calling accuracy.
+https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k
+
+# [HIGH VALUE - COMPACT AGENT] Nous Research's curated function-calling dataset used to train Hermes models
+# for zero-chatter, immediate tool dispatching.
+https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1
+
+# [BENCHMARK - MULTI-TURN & COMPLEX SLOTS] Industry standard for complex intent decomposition,
+# slot filling, and multi-action compound dialogue.
+https://huggingface.co/datasets/MultiWOZ/multiwoz_v22
+
+# [LOCAL NATIVE DATASET - 100% TAILORED]
+# Located at: d:\Projects\desktop-llm\dataset\train.jsonl
+# 5,400 training pairs built specifically for our 17 Windows system tools:
+# - 40% Single-intent (colloquial, slang, direct)
+# - 35% Multi-intent (parallel, sequential, pronoun resolution)
+# - 10% Implicit compound (bedtime, focus mode, presentation mode)
+# - 15% Fallbacks & conversational safety nets

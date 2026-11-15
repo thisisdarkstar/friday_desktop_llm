@@ -1,0 +1,173 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DesktopIntentToolRegistry",
+  "description": "Taxonomy of system control tools available to DesktopIntent-LLM",
+  "tools": [
+    {
+      "name": "set_volume",
+      "description": "Set master audio volume level (0 to 100).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "level": { "type": "integer", "minimum": 0, "maximum": 100 }
+        },
+        "required": ["level"]
+      }
+    },
+    {
+      "name": "mute_audio",
+      "description": "Mute or unmute master audio.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "mute": { "type": "boolean" }
+        },
+        "required": ["mute"]
+      }
+    },
+    {
+      "name": "change_volume",
+      "description": "Increase or decrease audio volume by delta percentage points.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "delta": { "type": "integer" }
+        },
+        "required": ["delta"]
+      }
+    },
+    {
+      "name": "get_volume",
+      "description": "Retrieve current master volume level and mute status.",
+      "parameters": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "set_brightness",
+      "description": "Set display brightness level (0 to 100).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "level": { "type": "integer", "minimum": 0, "maximum": 100 }
+        },
+        "required": ["level"]
+      }
+    },
+    {
+      "name": "change_brightness",
+      "description": "Increase or decrease brightness by delta percentage points.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "delta": { "type": "integer" }
+        },
+        "required": ["delta"]
+      }
+    },
+    {
+      "name": "get_brightness",
+      "description": "Retrieve current screen brightness.",
+      "parameters": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "launch_app",
+      "description": "Launch an application or open a URI scheme.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" }
+        },
+        "required": ["name"]
+      }
+    },
+    {
+      "name": "kill_app",
+      "description": "Terminate or close a running application by process name.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" }
+        },
+        "required": ["name"]
+      }
+    },
+    {
+      "name": "manage_window",
+      "description": "Change window state (minimize, maximize, restore, focus, close).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "app": { "type": "string" },
+          "action": { "type": "string", "enum": ["minimize", "maximize", "restore", "focus", "close"] }
+        },
+        "required": ["app", "action"]
+      }
+    },
+    {
+      "name": "create_timer",
+      "description": "Create a countdown timer in seconds.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "duration_seconds": { "type": "integer", "minimum": 1 },
+          "label": { "type": "string" }
+        },
+        "required": ["duration_seconds"]
+      }
+    },
+    {
+      "name": "create_reminder",
+      "description": "Schedule a reminder in N minutes.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "message": { "type": "string" },
+          "minutes_from_now": { "type": "integer", "minimum": 1 }
+        },
+        "required": ["message"]
+      }
+    },
+    {
+      "name": "take_note",
+      "description": "Save a quick text note to desktop notes file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": { "type": "string" }
+        },
+        "required": ["text"]
+      }
+    },
+    {
+      "name": "calculate",
+      "description": "Evaluate a mathematical expression or percentage calculation.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "expression": { "type": "string" }
+        },
+        "required": ["expression"]
+      }
+    },
+    {
+      "name": "lock_pc",
+      "description": "Immediately lock the Windows workstation.",
+      "parameters": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "get_system_stats",
+      "description": "Get current CPU, RAM, and Battery percentages.",
+      "parameters": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "chat_response",
+      "description": "Respond conversationally when the user greets, asks identity questions, or gives unsupported queries.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "message": { "type": "string" }
+        },
+        "required": ["message"]
+      }
+    }
+  ]
+}

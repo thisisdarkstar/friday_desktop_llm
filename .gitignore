@@ -1,0 +1,27 @@
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints
+
+# Large model artifacts & weights
+models/
+*.gguf
+*.bin
+*.safetensors
+
+# Training checkpoints & outputs
+training/runs/
+training/results/
+checkpoint-*/
+
+# Datasets & data temp
+dataset/*.jsonl
+data/*.jsonl
+data/sandbox_tmp/
+data/tts_cache/
