@@ -66,7 +66,7 @@ BENCHMARK_PROMPTS = [
 ]
 
 
-def test_ollama(model_name: str = "desktop-intent"):
+def test_ollama(model_name: str = "friday:latest"):
     import requests
 
     print(f"\n==========================================")

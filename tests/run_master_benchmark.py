@@ -25,7 +25,7 @@ def main():
 
     print("=" * 85, flush=True)
     print(f"🔥 FRIDAY AI GRAND MASTER BENCHMARK: {target_model}", flush=True)
-    print(f"🎯 Total Test Battery: 293 tests across 3 comprehensive benchmark suites", flush=True)
+    print(f"🎯 Total Test Battery: 340 tests across 3 comprehensive benchmark suites (v4 Full Battery)", flush=True)
     print("=" * 85, flush=True)
 
     suite_results = {}
@@ -45,7 +45,7 @@ def main():
             s1_total += 1
             prompt = t["query"]
             desc = t["desc"]
-            calls, raw, lat = comp_mod.query_ollama(prompt)
+            calls, raw, lat = comp_mod.query_ollama(prompt, system=t.get("system"))
             s1_lat += lat
 
             passed = False
@@ -86,7 +86,7 @@ def main():
             tid = t.get("id", "S")
             query = t["query"]
             desc = t["desc"]
-            calls, raw, lat = stress_mod.query_ollama(target_model, query)
+            calls, raw, lat = stress_mod.query_ollama(target_model, query, system=t.get("system"))
             s2_lat += lat
 
             passed = False

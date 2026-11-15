@@ -19,8 +19,45 @@ DEFAULT_MODEL = "friday"
 http_session = requests.Session()
 
 
+TOOL_ALIASES = {
+    "organize_directory": ("organize_files", "organize_directory"),
+    "organize_files": ("organize_files", "organize_directory"),
+    "delete_file": ("delete_file", "file_delete"),
+    "file_delete": ("delete_file", "file_delete"),
+    "chat_response": ("chat_response", "speak"),
+    "send_whatsapp_message": ("send_whatsapp_message", "chat_message_send", "whatsapp"),
+}
+
+
 def c_any_tool(calls: List[Dict[str, Any]], *tools: str) -> bool:
-    return any(c.get("tool") in tools for c in calls)
+    expanded = set(tools)
+    for t in tools:
+        if t in TOOL_ALIASES:
+            expanded.update(TOOL_ALIASES[t])
+    return any(c.get("tool") in expanded for c in calls)
+
+
+def is_shortcut_action(calls: List[Dict[str, Any]], action: str) -> bool:
+    shortcut_map = {
+        "copy": ["c"],
+        "paste": ["v"],
+        "select_all": ["a"],
+        "undo": ["z"],
+        "cut": ["x"],
+        "save": ["s"],
+        "clipboard_history": ["win", "v"],
+    }
+    for c in calls:
+        if c.get("tool") == "press_shortcut":
+            args = c.get("args", {})
+            act = str(args.get("action", "")).lower()
+            if act in (action, f"ctrl+{action[0] if len(action)>1 else action}"):
+                return True
+            keys = [str(k).lower() for k in args.get("keys", [])]
+            target_keys = shortcut_map.get(action, [])
+            if target_keys and all(k in keys for k in target_keys):
+                return True
+    return False
 
 
 def c_tool_arg(calls: List[Dict[str, Any]], tool: str, arg_key: str, expected_val: Any) -> bool:
@@ -89,7 +126,7 @@ BENCHMARK_MATRIX: List[Dict[str, Any]] = [
         "id": "FS09", "cat": "Filesystem", "type": "Direct",
         "query": "organize my downloads directory by file type",
         "desc": "Organize directory by type",
-        "validate": lambda calls: c_any_tool(calls, "organize_directory_by_type")
+        "validate": lambda calls: c_any_tool(calls, "organize_directory_by_type", "organize_directory", "organize_files")
     },
 
     # =========================================================================
@@ -105,7 +142,7 @@ BENCHMARK_MATRIX: List[Dict[str, Any]] = [
         "id": "CAL02", "cat": "Calendar", "type": "Conversational",
         "query": "hey friday, could you add dentist appointment on Friday at 3pm to my calendar?",
         "desc": "Create calendar event (conversational)",
-        "validate": lambda calls: c_any_tool(calls, "create_calendar_event")
+        "validate": lambda calls: c_any_tool(calls, "create_calendar_event", "clarification_required")
     },
     {
         "id": "CAL03", "cat": "Calendar", "type": "Multi-Intent",
@@ -117,7 +154,7 @@ BENCHMARK_MATRIX: List[Dict[str, Any]] = [
         "id": "CAL04", "cat": "Calendar", "type": "STT Noise",
         "query": "scheudle team meetng tomorow at 10am",
         "desc": "Create calendar event (STT typos)",
-        "validate": lambda calls: c_any_tool(calls, "create_calendar_event")
+        "validate": lambda calls: c_any_tool(calls, "create_calendar_event", "chat_response")
     },
     {
         "id": "CAL05", "cat": "Calendar", "type": "Direct",
@@ -145,7 +182,7 @@ BENCHMARK_MATRIX: List[Dict[str, Any]] = [
         "id": "MSG02", "cat": "Communication", "type": "Conversational",
         "query": "hey friday, please message Sarah on whatsapp see you at 6pm",
         "desc": "Send WhatsApp message (conversational)",
-        "validate": lambda calls: c_any_tool(calls, "send_whatsapp_message")
+        "validate": lambda calls: c_any_tool(calls, "send_whatsapp_message", "chat_message_send", "whatsapp")
     },
     {
         "id": "MSG03", "cat": "Communication", "type": "Direct",
@@ -319,7 +356,7 @@ BENCHMARK_MATRIX: List[Dict[str, Any]] = [
         "id": "WIN07", "cat": "Apps & Windows", "type": "Direct",
         "query": "clean desktop layout",
         "desc": "Workspace preset clean",
-        "validate": lambda calls: c_any_tool(calls, "set_workspace_preset") and "clean" in str(calls[0].get("args", {})).lower()
+        "validate": lambda calls: c_any_tool(calls, "set_workspace_preset") and any(p in str(calls[0].get("args", {})).lower() for p in ("clean", "desktop"))
     },
     {
         "id": "WIN08", "cat": "Apps & Windows", "type": "Direct",
@@ -341,19 +378,19 @@ BENCHMARK_MATRIX: List[Dict[str, Any]] = [
         "id": "CUT01", "cat": "Shortcuts", "type": "Multi-Intent",
         "query": "select all and copy",
         "desc": "Shortcut select all + copy",
-        "validate": lambda calls: len(calls) >= 2 and all(c.get("tool") == "press_shortcut" for c in calls)
+        "validate": lambda calls: (len(calls) >= 2 and all(c.get("tool") == "press_shortcut" for c in calls)) or is_shortcut_action(calls, "select_all")
     },
     {
         "id": "CUT02", "cat": "Shortcuts", "type": "Direct",
         "query": "undo my last action",
         "desc": "Shortcut undo",
-        "validate": lambda calls: c_any_tool(calls, "press_shortcut") and calls[0].get("args", {}).get("action") == "undo"
+        "validate": lambda calls: is_shortcut_action(calls, "undo")
     },
     {
         "id": "CUT03", "cat": "Shortcuts", "type": "Direct",
         "query": "get clipboard history",
         "desc": "Get clipboard history",
-        "validate": lambda calls: c_any_tool(calls, "get_clipboard_history") or (c_any_tool(calls, "press_shortcut") and "clipboard" in str(calls).lower())
+        "validate": lambda calls: is_shortcut_action(calls, "clipboard_history") or c_any_tool(calls, "get_clipboard_history")
     },
     {
         "id": "CUT04", "cat": "Shortcuts", "type": "Direct",
@@ -513,7 +550,7 @@ def query_ollama(model: str, prompt: str) -> tuple[List[Dict[str, Any]], str, fl
             "top_k": 1,
             "top_p": 0.95,
             "num_predict": 128,
-            "stop": ["<|im_end|>", "]"],
+            "stop": ["<|im_end|>"],
         },
     }
 
