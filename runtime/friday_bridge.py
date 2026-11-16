@@ -12,9 +12,11 @@ import time
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 import requests
+from runtime.safeguards import apply_safeguards, query_with_fallback
 
 OLLAMA_ENDPOINT = "http://127.0.0.1:11434/api/generate"
-DEFAULT_MODEL = "friday"
+DEFAULT_MODEL = "friday:0.5b-ultimate"
+FALLBACK_MODEL = "friday:1.5b"
 
 
 @dataclass
@@ -29,8 +31,14 @@ class SimpleIntentRoute:
 class FridayNeuralRouter:
     """Drop-in neural router for FRIDAY AI Assistant."""
 
-    def __init__(self, model_name: str = DEFAULT_MODEL, endpoint: str = OLLAMA_ENDPOINT):
+    def __init__(
+        self,
+        model_name: str = DEFAULT_MODEL,
+        fallback_model: str = FALLBACK_MODEL,
+        endpoint: str = OLLAMA_ENDPOINT,
+    ):
         self.model_name = model_name
+        self.fallback_model = fallback_model
         self.endpoint = endpoint
         self.session = requests.Session()
 
@@ -39,36 +47,17 @@ class FridayNeuralRouter:
         prompt: str,
         timeout: float = 3.0,
     ) -> List[SimpleIntentRoute]:
-        """Sends the user prompt to DesktopIntent-LLM and converts the output to FRIDAY routes.
-        
-        Returns an empty list [] if the model delegates to a high-level reasoning model,
-        signaling FRIDAY to proceed with its cloud LLM pipeline.
+        """Sends the user prompt to DesktopIntent-LLM, applies deterministic safeguards,
+        cascades to 1.5B on complex compound chains, and converts to FRIDAY routes.
         """
-        payload = {
-            "model": self.model_name,
-            "prompt": prompt,
-            "stream": False,
-            "options": {
-                "temperature": 0.0,
-                "top_k": 1,
-                "top_p": 0.95,
-                "num_predict": 128,
-                "stop": ["<|im_end|>", "]"],
-            },
-        }
-
         try:
-            start_time = time.perf_counter()
-            resp = self.session.post(self.endpoint, json=payload, timeout=timeout)
-            resp.raise_for_status()
-            raw_output = resp.json().get("response", "").strip()
-            elapsed_ms = (time.perf_counter() - start_time) * 1000
-
-            # Ensure proper closing bracket if truncated by stop token
-            if raw_output.startswith("[") and not raw_output.endswith("]"):
-                raw_output += "]"
-
-            tool_calls = json.loads(raw_output)
+            tool_calls, used_model = query_with_fallback(
+                prompt=prompt,
+                primary_model=self.model_name,
+                fallback_model=self.fallback_model,
+                endpoint=self.endpoint,
+                session=self.session,
+            )
             routes = []
 
             for call in tool_calls:
@@ -81,7 +70,6 @@ class FridayNeuralRouter:
             return routes
 
         except Exception as e:
-            # On connection failure or invalid JSON, return empty list for fallback
             return []
 
     def _map_tool_to_route(

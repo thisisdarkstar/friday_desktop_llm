@@ -1,0 +1,17 @@
+{
+  "model": "friday:0.5b-ultimate",
+  "total_tests": 266,
+  "raw_passed": 259,
+  "raw_accuracy": 97.36842105263158,
+  "safeguarded_passed": 266,
+  "safeguarded_accuracy": 100.0,
+  "interventions": {
+    "Tool Alias Normalization": 3,
+    "App Name Canonicalization": 0,
+    "Action Precedence Override": 2,
+    "Argument Clamping / Coercion": 1,
+    "Cascaded / Unresolved": 0,
+    "Cascaded to 1.5B": 1
+  },
+  "unresolved_residuals": []
+}
