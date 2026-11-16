@@ -1,0 +1,165 @@
+{
+  "model": "friday:0.5b-ultimate",
+  "total_passed": 218,
+  "total_tests": 225,
+  "overall_accuracy": 96.88888888888889,
+  "json_validity_rate": 100.0,
+  "avg_latency": 320.9184977780226,
+  "p50_latency": 285.38960000150837,
+  "p95_latency": 560.3204999933951,
+  "p99_latency": 662.8098999935901,
+  "elapsed_total": 72.21911410000757,
+  "categories": {
+    "1. Single Intent (Every FRIDAY Tool in Isolation)": {
+      "passed": 39,
+      "total": 40,
+      "accuracy": 97.5,
+      "avg_latency": 269.2647375006345
+    },
+    "2. Multi-Intent Compound Chains": {
+      "passed": 39,
+      "total": 40,
+      "accuracy": 97.5,
+      "avg_latency": 493.43622499873163
+    },
+    "3. Pure Conversational, Identity & Status": {
+      "passed": 34,
+      "total": 35,
+      "accuracy": 97.14285714285714,
+      "avg_latency": 296.9329971437609
+    },
+    "4. Mixed Conversational + Actions": {
+      "passed": 37,
+      "total": 40,
+      "accuracy": 92.5,
+      "avg_latency": 304.8533025001234
+    },
+    "5. Real-World STT Noise & Cloud Reasoning Delegation": {
+      "passed": 35,
+      "total": 35,
+      "accuracy": 100.0,
+      "avg_latency": 263.47893142997884
+    },
+    "6. Stateful Anaphora & Coreference (2-Turn Context)": {
+      "passed": 14,
+      "total": 15,
+      "accuracy": 93.33333333333333,
+      "avg_latency": 218.79459333528453
+    },
+    "7. Dynamic In-Context Runtime Tools (Zero-Shot Schemas)": {
+      "passed": 10,
+      "total": 10,
+      "accuracy": 100.0,
+      "avg_latency": 253.80010999797378
+    },
+    "8. Calibrated Ambiguity & Destructive Safety Gating": {
+      "passed": 10,
+      "total": 10,
+      "accuracy": 100.0,
+      "avg_latency": 407.01538999855984
+    }
+  },
+  "failures": [
+    {
+      "id": "S12",
+      "cat": "1. Single Intent (Every FRIDAY Tool in Isolation)",
+      "desc": "Launch Chrome",
+      "query": "start google chrome",
+      "output": [
+        {
+          "tool": "launch_app",
+          "args": {
+            "name": "google"
+          }
+        }
+      ]
+    },
+    {
+      "id": "M37",
+      "cat": "2. Multi-Intent Compound Chains",
+      "desc": "Conjunction 'after that': Close app + Launch app + Preset",
+      "query": "close discord, after that open slack and switch to meeting layout",
+      "output": [
+        {
+          "tool": "close_app",
+          "args": {
+            "name": "discord"
+          }
+        },
+        {
+          "tool": "set_workspace_preset",
+          "args": {
+            "preset": "meeting"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "cat": "3. Pure Conversational, Identity & Status",
+      "desc": "Version check",
+      "query": "what version are you running?",
+      "output": [
+        {
+          "tool": "get_version",
+          "args": {}
+        }
+      ]
+    },
+    {
+      "id": "X04",
+      "cat": "4. Mixed Conversational + Actions",
+      "desc": "Greeting + Set volume",
+      "query": "hi friday, set volume to 60 please",
+      "output": [
+        {
+          "tool": "chat_response",
+          "args": {
+            "message": "Hello! Systems online and ready."
+          }
+        }
+      ]
+    },
+    {
+      "id": "X22",
+      "cat": "4. Mixed Conversational + Actions",
+      "desc": "Greeting + System info",
+      "query": "hello friday, please check cpu and memory usage for me",
+      "output": [
+        {
+          "tool": "check_system_info",
+          "args": {}
+        }
+      ]
+    },
+    {
+      "id": "X27",
+      "cat": "4. Mixed Conversational + Actions",
+      "desc": "Comment + Close app + Set volume",
+      "query": "what a long day, close slack and set volume to 10",
+      "output": [
+        {
+          "tool": "chat_response",
+          "args": {
+            "message": "I can only control your computer and digital devices, Boss."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "cat": "6. Stateful Anaphora & Coreference (2-Turn Context)",
+      "desc": "Anaphora: Close that window (Spotify)",
+      "query": "[Prior Action: {\"tool\": \"launch_app\", \"args\": {\"name\": \"spotify\"}}]\nClose that window",
+      "output": [
+        {
+          "tool": "manage_window",
+          "args": {
+            "app": "spotify",
+            "action": "close"
+          }
+        }
+      ]
+    }
+  ]
+}
