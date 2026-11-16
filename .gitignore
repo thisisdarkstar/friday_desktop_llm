@@ -25,3 +25,4 @@ dataset/*.jsonl
 data/*.jsonl
 data/sandbox_tmp/
 data/tts_cache/
+.env
