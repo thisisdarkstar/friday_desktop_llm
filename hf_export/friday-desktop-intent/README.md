@@ -39,6 +39,12 @@ configs:
   data_files:
   - split: test
     path: benchmark/test.jsonl
+- config_name: v4_perfect
+  data_files:
+  - split: train
+    path: subsets/v4_perfect/train.jsonl
+  - split: validation
+    path: subsets/v4_perfect/validation.jsonl
 ---
 
 # FRIDAY DesktopIntent Dataset 🖥️⚡

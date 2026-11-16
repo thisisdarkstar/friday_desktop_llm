@@ -22,7 +22,11 @@ checkpoint-*/
 
 # Datasets & data temp
 dataset/*.jsonl
+dataset/backup_v3/
 data/*.jsonl
 data/sandbox_tmp/
 data/tts_cache/
+hf_export/**/*.jsonl
 .env
+notebooks/temp_kaggle*/
+scratch/
