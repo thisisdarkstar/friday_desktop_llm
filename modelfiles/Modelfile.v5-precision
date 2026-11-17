@@ -1,4 +1,4 @@
-FROM ../models/friday-0.5b-v5-q8.gguf
+FROM ../models/friday-v5-q8.gguf
 
 PARAMETER temperature 0.0
 PARAMETER top_k 1

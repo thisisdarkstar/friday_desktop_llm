@@ -11,7 +11,7 @@ from pathlib import Path
 KERNEL_SLUG = "thisisdarkstar/friday-0-5b-v5-precision"
 ROOT_DIR = Path("D:/Projects/desktop-llm")
 OUTPUT_DIR = ROOT_DIR / "models" / "friday-0.5b-v5"
-GGUF_DEST = ROOT_DIR / "models" / "friday-0.5b-v5-q8.gguf"
+GGUF_DEST = ROOT_DIR / "models" / "friday-v5-q8.gguf"
 KAGGLE_BIN = ROOT_DIR / ".venv" / "Scripts" / "kaggle.exe"
 
 os.environ["KAGGLE_API_TOKEN"] = os.environ.get(

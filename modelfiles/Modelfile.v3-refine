@@ -1,4 +1,4 @@
-FROM ../models/desktop-intent-q8-v3.gguf
+FROM ../models/friday-v3-q8.gguf
 
 PARAMETER temperature 0.0
 PARAMETER top_k 1
