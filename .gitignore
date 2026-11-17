@@ -23,6 +23,7 @@ checkpoint-*/
 
 # Third-party source repositories
 llama.cpp/
+*/llama.cpp/*
 training/llama_cpp/
 
 # Datasets & local data
