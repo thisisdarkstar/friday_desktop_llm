@@ -45,6 +45,18 @@ configs:
     path: subsets/v4_perfect/train.jsonl
   - split: validation
     path: subsets/v4_perfect/validation.jsonl
+- config_name: v5_precision
+  data_files:
+  - split: train
+    path: subsets/v5_precision/train.jsonl
+  - split: validation
+    path: subsets/v5_precision/validation.jsonl
+- config_name: v6_daily_essentials
+  data_files:
+  - split: train
+    path: subsets/v6_daily_essentials/train.jsonl
+  - split: validation
+    path: subsets/v6_daily_essentials/validation.jsonl
 ---
 
 # FRIDAY DesktopIntent Dataset 🖥️⚡

@@ -3,11 +3,12 @@
 env/
 venv/
 
-# Python cache
+# Python cache & artifacts
 __pycache__/
 *.py[cod]
 *$py.class
 *.ipynb_checkpoints
+*.log
 
 # Large model artifacts & weights
 models/
@@ -20,13 +21,18 @@ training/runs/
 training/results/
 checkpoint-*/
 
-# Datasets & data temp
+# Third-party source repositories
+llama.cpp/
+training/llama_cpp/
+
+# Datasets & local data
 dataset/*.jsonl
 dataset/backup_v3/
-data/*.jsonl
-data/sandbox_tmp/
-data/tts_cache/
+data/
 hf_export/**/*.jsonl
+
+# Scratch, temporary kaggle workers & env secrets
 .env
 notebooks/temp_kaggle*/
+notebooks/temp_*/
 scratch/

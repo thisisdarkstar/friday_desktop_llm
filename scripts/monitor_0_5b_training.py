@@ -15,7 +15,7 @@ GGUF_DEST = ROOT_DIR / "models" / "friday-0.5b-ultimate-q8.gguf"
 KAGGLE_BIN = ROOT_DIR / ".venv" / "Scripts" / "kaggle.exe"
 
 os.environ["KAGGLE_API_TOKEN"] = os.environ.get(
-    "KAGGLE_API_TOKEN", "KGAT_638244114569e1e1c226299332ed59e8"
+    "KAGGLE_API_TOKEN", ""
 )
 
 

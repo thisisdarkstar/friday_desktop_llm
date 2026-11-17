@@ -27,7 +27,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 import tests.stress_test_benchmark as stress_mod
 import tests.exhaustive_all_tools_benchmark as ex_mod
 
-MODEL_NAME = "friday:0.5b-ultimate"
+MODEL_NAME = "friday:0.5b-v5"
 
 # =============================================================================
 # PRODUCTION SAFEGUARD ENGINE (DETERMINISTIC <1ms PYTHON LAYER)
@@ -244,19 +244,6 @@ def main():
             sg_ok = False
 
         rescued_by = "Tool / App Normalizer"
-        if not sg_ok:
-            # Stage 2: Cascade to friday:1.5b for deep disambiguation on dropped compound chains
-            c_calls, _, _ = stress_mod.query_ollama("friday:1.5b", q, system=t.get("system"))
-            c_sg_calls = apply_safeguards(c_calls, q)
-            try:
-                if bool(t["validate"](c_sg_calls)):
-                    sg_ok = True
-                    sg_calls = c_sg_calls
-                    safeguard_interventions["Cascaded to 1.5B"] = safeguard_interventions.get("Cascaded to 1.5B", 0) + 1
-                    rescued_by = "1.5B Model Cascade"
-            except Exception:
-                pass
-
         if sg_ok:
             safeguarded_passed += 1
             if rescued_by != "1.5B Model Cascade":
