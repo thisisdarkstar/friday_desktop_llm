@@ -1,0 +1,49 @@
+{
+  "weights": {
+    "synthetic_full": 1,
+    "calibration": 2,
+    "v4_perfect": 2,
+    "v5_precision": 5,
+    "v6_daily_essentials": 2,
+    "v7_productivity": 2,
+    "hardcase_replay": 8
+  },
+  "train_duplicates_removed": 7633,
+  "train_unresolved_semantic_conflicts": 0,
+  "train_arg_variants_resolved": 23,
+  "train_overrides_applied": 27,
+  "validation_duplicates_removed": 614,
+  "validation_unresolved_semantic_conflicts": 0,
+  "validation_arg_variants_resolved": 3,
+  "validation_overrides_applied": 12,
+  "validation_rows_removed_as_train_leak": 435,
+  "train_total": 27779,
+  "validation_total": 2925,
+  "unique_per_subset": {
+    "synthetic_full": 7236,
+    "v4_perfect": 294,
+    "v5_precision": 1563,
+    "v6_daily_essentials": 2450,
+    "v7_productivity": 3431,
+    "calibration": 89,
+    "hardcase_replay": 25
+  },
+  "exposures_per_subset": {
+    "synthetic_full": 7236,
+    "v4_perfect": 588,
+    "v5_precision": 7815,
+    "v6_daily_essentials": 4900,
+    "v7_productivity": 6862,
+    "calibration": 178,
+    "hardcase_replay": 200
+  },
+  "exposure_share_pct": {
+    "synthetic_full": 26.05,
+    "v4_perfect": 2.12,
+    "v5_precision": 28.13,
+    "v6_daily_essentials": 17.64,
+    "v7_productivity": 24.7,
+    "calibration": 0.64,
+    "hardcase_replay": 0.72
+  }
+}

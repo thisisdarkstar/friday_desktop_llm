@@ -31,8 +31,8 @@ def main():
         ignore_patterns=["upload_to_hf.py"],
     )
 
-    print("\n🎉 Successfully uploaded to Hugging Face!")
-    print(f"🔗 View your dataset at: https://huggingface.co/datasets/{repo_id}")
+    print("\n[+] Successfully uploaded to Hugging Face!")
+    print(f"[+] View your dataset at: https://huggingface.co/datasets/{repo_id}")
 
 if __name__ == "__main__":
     main()

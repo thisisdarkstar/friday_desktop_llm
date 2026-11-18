@@ -19,6 +19,7 @@ models/
 # Training checkpoints & outputs
 training/runs/
 training/results/
+tests/results/
 checkpoint-*/
 
 # Third-party source repositories
@@ -37,3 +38,6 @@ hf_export/**/*.jsonl
 notebooks/temp_kaggle*/
 notebooks/temp_*/
 scratch/
+
+# extra datas
+*.txt
