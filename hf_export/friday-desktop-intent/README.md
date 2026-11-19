@@ -75,6 +75,12 @@ configs:
     path: subsets/v9_blend/train.jsonl
   - split: validation
     path: subsets/v9_blend/validation.jsonl
+- config_name: v10_blend
+  data_files:
+  - split: train
+    path: subsets/v10_blend/train.jsonl
+  - split: validation
+    path: subsets/v10_blend/validation.jsonl
 ---
 
 # FRIDAY DesktopIntent Dataset 🖥️⚡
@@ -97,7 +103,8 @@ This repository provides multiple configurations via the Hugging Face `datasets`
 | **`benchmark`** | **293** | The complete 293-query test battery used to evaluate desktop automation accuracy. |
 | **`v7_productivity`** | **~3,400** | v7's productivity-focused subset (new desktop/app/process tools). |
 | **`v8_blend`** | **~15,100** | Deduped, rebalanced blend (v5 core restored to 28%, v7 cut to 2x) plus a 34-case hard-case replay. Planned tool intents preserved. |
-| **`v9_blend`** | **~15,800** | **Recommended**: v8 plus the shortcut-schema fix, 20 new hard cases for the v8 gate failures, and v5 core lifted to ~32%. |
+| **`v9_blend`** | **~15,800** | v8 plus the shortcut-schema fix, 20 new hard cases for the v8 gate failures, and v5 core lifted to ~32%. |
+| **`v10_blend` (Definitive)** | **29,551** | **⭐ Recommended (Master Corpus)**: 100% unified MCP schema, single-key GUI guard (`press_key`), read-only inspection safety (`get_system_theme`), zero hallucinations, and all 18 planned future tools preserved. |
 
 ---
 
